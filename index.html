@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Bangladesh Railway</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <style>
+    .map-container {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+    }
+
+    .map-container iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body class="grey lighten-3">
+
+  <!--Main Navigation-->
+  <header>
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed">
+
+      <a class="waves-effect text-center">
+        <img src="https://seeklogo.com/images/B/bangladesh-railway-logo-1C9A4CDB3E-seeklogo.com.jpg" alt="" width="100%" style="padding: 30px">
+      </a>
+      <div class="text-center">
+        System Admin
+        <br>
+        +8801704670076
+        <br><br>
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item active waves-effect">
+          <i class="fas fa-chart-pie mr-3"></i>Home
+        </a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-file-contract mr-3"></i>Report</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-sign-out-alt mr-3"></i>Logout</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-phone mr-3"></i>Contact</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-life-ring mr-3"></i>Support</a>
+      </div>
+
+    </div>
+    <!-- Sidebar -->
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="pt-5 mx-lg-5">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-sm-4">
+          <!-- Card -->
+          <div class="card" style="background: #43A047; color: white">
+            <!-- Card content -->
+            <div class="card-body text-center">
+              <i class="fas fa-train" style="font-size: 50px"></i>
+              <br><br>
+              <!-- Title -->
+              <h4>Total Trains</h4>
+              <h3 class="card-title">50</h3>
+            </div>
+
+          </div>
+          <!-- Card -->
+        </div>
+        <div class="col-sm-4">
+          <!-- Card -->
+          <div class="card" style="background: #E53935; color: white">
+            <!-- Card content -->
+            <div class="card-body text-center">
+              <i class="fas fa-hand-paper" style="font-size: 50px"></i>
+              <br><br>
+              <!-- Title -->
+              <h4>In Station</h4>
+              <h3 class="card-title">20</h3>
+            </div>
+
+          </div>
+          <!-- Card -->
+        </div>
+        <div class="col-sm-4">
+          <!-- Card -->
+          <div class="card" style="background: #3949AB; color: white">
+            <!-- Card content -->
+            <div class="card-body text-center">
+              <i class="fas fa-poo-storm" style="font-size: 50px"></i>
+              <br><br>
+              <!-- Title -->
+              <h4>Running Trains</h4>
+              <h3 class="card-title">30</h3>
+            </div>
+
+          </div>
+          <!-- Card -->
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-sm-12">
+          <form class="d-flex justify-content-center">
+            <!-- Default input -->
+            <input type="search" placeholder="Type your query" aria-label="Search" class="form-control">
+            <button class="btn btn-primary btn-sm my-0 p" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+      <!--Grid row-->
+      <div class="row wow fadeIn mt-3">
+
+        <!--Grid column-->
+        <div class="col-md-8 mb-4">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <div class="card-body">
+
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Train ID</th>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Last Stop</th>
+                    <th scope="col">Next Stop</th>
+                    <th scope="col">Remarks</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>#CH56F5E</td>
+                    <td>Chitra Express</td>
+                    <td>Kamalapur</td>
+                    <td>Biman Bandar</td>
+                    <td>In Time</td>
+                    <td onclick="show()"><i class="fas fa-desktop"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>#UE76F5D</td>
+                    <td>Upaban Express</td>
+                    <td>Biman Bandar</td>
+                    <td>Tongi</td>
+                    <td>5 min delay</td>
+                    <td onclick="show2()"><i class="fas fa-desktop"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>#RU23F2K</td>
+                    <td>Rupsha Express</td>
+                    <td>Kamalapur</td>
+                    <td>Biman Bandar</td>
+                    <td>In Time</td>
+                    <td onclick="show()"><i class="fas fa-desktop"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>#UE76F5D</td>
+                    <td>Upaban Express</td>
+                    <td>Biman Bandar</td>
+                    <td>Tongi</td>
+                    <td>5 min delay</td>
+                    <td onclick="show2()"><i class="fas fa-desktop"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>#RU23F2K</td>
+                    <td>Rupsha Express</td>
+                    <td>Kamalapur</td>
+                    <td>Biman Bandar</td>
+                    <td>In Time</td>
+                    <td onclick="show()"><i class="fas fa-desktop"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-4 mb-4" id="sideReport" hidden>
+
+          <!--Card-->
+          <div class="card mb-4">
+
+            <!--Card content-->
+            <div class="card-body">
+              <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 100px">
+                <iframe src="https://maps.google.com/maps?q=banani&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                  style="border:0" allowfullscreen></iframe>
+              </div>
+              <div class="mt-4">
+                <b>Train ID: </b> #CH56F5E
+                <br>
+                <b>Train Name: </b> Chitra Express
+                <br>
+                <b>Last Stop: </b> Kamalapur
+                <br>
+                <b>Next Stop: </b> Biman Bandar
+                <br>
+                <b>Remarks: </b> In Time
+              </div>
+              <div class="row mt-4">
+                <div class="col-sm-6">
+                  <button class="btn btn-danger" width="100%">
+                    Alert
+                  </button>
+                </div>
+                <div class="col-sm-6">
+                  <button class="btn btn-success" width="100%">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-4 mb-4" id="sideReport2" hidden>
+
+            <!--Card-->
+            <div class="card mb-4">
+  
+              <!--Card content-->
+              <div class="card-body">
+                <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 100px">
+                  <iframe src="https://maps.google.com/maps?q=banani&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                    style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="mt-4">
+                  <b>Train ID: </b> #UE76F5D
+                  <br>
+                  <b>Train Name: </b> Upaban Express
+                  <br>
+                  <b>Last Stop: </b> Biman Bandar
+                  <br>
+                  <b>Next Stop: </b> Tongi
+                  <br>
+                  <b>Remarks: </b> 5 min delay
+                </div>
+                <div class="row mt-4">
+                  <div class="col-sm-6">
+                    <button class="btn btn-danger" width="100%">
+                      Alert
+                    </button>
+                  </div>
+                  <div class="col-sm-6">
+                    <button class="btn btn-success" width="100%">
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+            <!--/.Card-->
+  
+          </div>
+          <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
+
+  <script>
+    function show(){
+      $("#sideReport").attr("hidden", false);
+      $("#sideReport2").attr("hidden", true);
+    }
+
+    function show2(){
+      $("#sideReport").attr("hidden", true);
+      $("#sideReport2").attr("hidden", false);
+    }
+  </script>
+
+  <!--Google Maps-->
+  <script src="https://maps.google.com/maps/api/js"></script>
+  <script>
+    // Regular map
+    function regular_map() {
+      var var_location = new google.maps.LatLng(40.725118, -73.997699);
+
+      var var_mapoptions = {
+        center: var_location,
+        zoom: 14
+      };
+
+      var var_map = new google.maps.Map(document.getElementById("map-container"),
+        var_mapoptions);
+
+      var var_marker = new google.maps.Marker({
+        position: var_location,
+        map: var_map,
+        title: "New York"
+      });
+    }
+
+    new Chart(document.getElementById("horizontalBar"), {
+      "type": "horizontalBar",
+      "data": {
+        "labels": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey"],
+        "datasets": [{
+          "label": "My First Dataset",
+          "data": [22, 33, 55, 12, 86, 23, 14],
+          "fill": false,
+          "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
+            "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"
+          ],
+          "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)",
+            "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)",
+            "rgb(201, 203, 207)"
+          ],
+          "borderWidth": 1
+        }]
+      },
+      "options": {
+        "scales": {
+          "xAxes": [{
+            "ticks": {
+              "beginAtZero": true
+            }
+          }]
+        }
+      }
+    });
+
+  </script>
+</body>
+
+</html>
